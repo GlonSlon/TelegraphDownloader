@@ -13,7 +13,7 @@ class TelegraphDownloader:
 		for key_word in input_words:
 			for date in date_file:
 
-				triger = "<Response 200>"
+				triger = "<Response [200]>"
 				test:Response = get("http://telegra.ph/"+key_word+date, headers = choice(config.UserAgentM))
 
 				if str(test) == triger:					
