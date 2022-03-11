@@ -13,14 +13,15 @@ class CheckURL:
 
 		for key_word in input_words:
 			for date in date_file:
-				
-				triger:str = "<Response [200]>"
-				test:Response = get("http://telegra.ph/"+key_word+date, headers = choice(config.UserAgentM))
+				try:
+					triger:str = "<Response [200]>"
+					test:Response = get("http://telegra.ph/"+key_word+date, headers = choice(config.UserAgentM))
 
-				if str(test) == triger: 
-					
-					listw.append(str("http://telegra.ph/"+key_word+date))
-
-				sleep(3)
+					if str(test) == triger:
+						
+						listw.append(str("http://telegra.ph/"+key_word+date))
+					else: pass
+					sleep(5)
+				except: pass
 
 		return listw
