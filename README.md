@@ -1,31 +1,38 @@
-# TelegraphDownloader
+<h1 align="center">Привет, меня зовут Vain</h1>
+====
 ![GitHub User's stars](https://img.shields.io/github/stars/GlonSlon?style=social)
 
 TelegraphDownloader - это утилита для быстрой и удобной загрузки медия c telegra.ph.
 
-Для использования необходимо 6 шагов:
+<h2>Для использования необходимо пройти 6 шагов:</h2>
 
-# Скачать утилиту
-«`{bash} {git clone https://github.com/GlonSlon/TelegraphDownloader.git}«`
+<h3>Скачать утилиту:</h3>
+git clone https://github.com/GlonSlon/TelegraphDownloader.git
 
-# Установить необходимые модули
-«`{bash} {pip3 install typing}«`
-«`{bash} {apt install python3-requests}«`
-«`{bash} {apt install python3-subprocess}«`
+<h3>Установить необходимые модули:</h3>
+```Bash
+pip3 install typing
+```
+```Bash
+apt install python3-requests
+```
+```Bash
+apt install python3-subprocess
+```
 
-# Запустить файл main.py
-«`{bash} {python3 main.py}«`
+<h3>Запустить файл main.py:</h3>
+python3 main.py
 
-# Ввести ключевые слова
-https://telegra.ph/file/43a89964d18454eedc189.png
+<h3>Ввести ключевые слова:</h3>
+![](https://telegra.ph/file/43a89964d18454eedc189.png)
 
-# Выбрать тип загрузки
-https://telegra.ph/file/8f23ce9f34b5de0e34f5d.png
+<h3>Выбрать тип загрузки:</h3>
+![](https://telegra.ph/file/8f23ce9f34b5de0e34f5d.png)
 
-# Дать имя директории, в которую будут сохранены файлы
-https://telegra.ph/file/2277bd34e8d911133bf3b.png
+<h3>Дать имя директории, в которую будут сохранены файлы:</h3>
+![](https://telegra.ph/file/2277bd34e8d911133bf3b.png)
 
-Далее необходимо подождать.
-Для начала будут проверены все собранные ссылки;
-После будет проходить загрузка всех файлов;
-И в конце файлы файлы будут переименованы и перемещены в вашу директорию.
+<h3>Ждём некоторое время...</h3>
+* Для начала будут проверены все собранные ссылки;
+* После будет проходить загрузка всех файлов;
+* И в конце файлы файлы будут переименованы и перемещены в вашу директорию.
