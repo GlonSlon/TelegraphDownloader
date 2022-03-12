@@ -14,10 +14,11 @@ class TelegraphDownloader:
 			for date in date_file:
 
 				triger = "<Response [200]>"
-				test:Response = get("http://telegra.ph/"+key_word+date, headers = choice(config.UserAgentM))
+				http = "http://telegra.ph/"+key_word+date
+				test:Response = get(http, headers = choice(config.UserAgentM))
 
-				if str(test) == triger:					
-					listw.append(str("http://telegra.ph/"+key_word+date))
+				if str(test) == triger:
+					listw.append(str(http))
 					
 				sleep(5)
 
@@ -27,13 +28,13 @@ class TelegraphDownloader:
 
 		for url in url_ls:
 
-			dir_downloads:str = 'photos/sort'
+			dir_downloads = 'photos/sort'
 			run(['wget', '-nd', '-r', '-P', dir_downloads,'-A', file_types, url])
 			sleep(7)
 
 	@staticmethod
-	def ls_files() -> List[str]: 
-		dir_downloads:str = "photos/sort"
+	def ls_files() -> List[str]:
+		dir_downloads = "photos/sort"
 		text_output:str = check_output(["ls", "-1", dir_downloads], universal_newlines=True)
 
 		return text_output.split('\n')[:-1]
@@ -41,10 +42,11 @@ class TelegraphDownloader:
 	def rename_files(self, name_new_dir:str) -> None:
 		s = 0
 		files:List[str] = TelegraphDownloader.ls_files()
+		sort_dir = 'photos/full/'+name_new_dir
 		
-		run(["mkdir","photos/full/"+name_new_dir])
+		run(["mkdir",sort_dir])
 
-		sorted_dir = 'photos/full/'+name_new_dir+"/file"+str(s+1) 
+		sorted_dir = sort_dir+"/file"+str(s+1) 
 
 		for i in range(len(files)):
 

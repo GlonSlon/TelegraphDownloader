@@ -4,15 +4,14 @@ import TGDL
 
 def main() -> None:
 	
-	key_words_input = input("Введите через запятую ключевые слова.\nПример:\n>anime,films,music,bass-music\n> ")
-	key_words_split:List[str] = key_words_input.split(',')
+	key_words_input:List[str] = input("Введите через запятую ключевые слова.\nПример:\n>anime,films,music,bass-music\n> ").split(',')
+	#key_words_split:List[str] = key_words_input.split(',')
 
 	while True:
 		file_type = input("Какие файлы загружать?\n1.Изображения/GIF\n2.Видео/Аудио\n3.Документы\n4.Всё вместе\nВведите 1,2,3 или 4 > ")
 
 		if file_type in ['1','2','3','4']: 
 			break
-
 		else:
 			print("Ошибка, повторите ввод")
 			continue
@@ -38,5 +37,6 @@ def main() -> None:
 	print("Загрузка файлов завешена.\nИдет процесс переименования файлов.")
 
 	tgdl.rename_files(name_dir)
+	print(f"Всё готово, файлы находятся в photos/full/{name_dir}")
 
 main()
