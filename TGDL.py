@@ -19,9 +19,7 @@ class TelegraphDownloader:
 				if str(test) == triger:					
 					listw.append(str("http://telegra.ph/"+key_word+date))
 					
-				else:
-					open("error_links.log",'a').write(str("http://telegra.ph/"+key_word+date))
-				sleep(3)
+				sleep(5)
 
 		return listw
 
